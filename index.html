@@ -3,168 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/Temp favicon.jpg" type="image/x-icon">
     <title>EVENT ተራ</title>
+    <link rel="stylesheet" href="style-index.css">
+    <link rel="icon" href="/images/Temp-favicon.jpg" type="image/x-icon">
 </head>
 <body>
 
-<header>
-    <p>EVENT ተራ | <small>Local Event Finder</small></p>
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        EVENT ተራ
+        <span>Local Event Finder</span>
+    </div>
     <nav>
-        <a href="index.html">Home</a> |
-        <a href="events.html">Browse Events</a> |
-        <a href="about_us.html">About</a> |
-        <a href="contact_us.html">Contact Us</a>
+        <a class="active" href="#">Home</a>
+        <a href="#">Browse Events</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
     </nav>
 </header>
 
-<hr>
-
 <main>
-    <section>
-        <p>Discover Free Community Events</p>
 
-        <h2>Find Local Events in<br>Ethiopia</h2>
+<!-- HERO -->
+<section class="hero">
+    <span class="pill">Discover Free Community Events</span>
 
-        <p>Centralized platform for discovering free community events, cultural gatherings, and social activities across Ethiopian cities</p>
+    <h1>Find Local Events in <br><span>Ethiopia</span></h1>
 
-        <form>
-            <input type="text" placeholder="Search events">
-            <button type="submit">Search</button>
-        </form>
+    <p class="subtitle">
+        Centralized platform for discovering free community events, cultural gatherings,
+        and social activities across Ethiopian cities
+    </p>
 
-        
-        <div>
-            <div>
-                <h3>12+</h3>
-                <p>Active Events</p>
-            </div>
-            <div>
-                <h3>100%</h3>
-                <p>Free to Attend</p>
-            </div>
-            <div>
-                <h3>5+</h3>
-                <p>Cities</p>
+    <form class="search-box">
+        <input type="text" placeholder="Search events, venues, or organizers...">
+        <button>Search</button>
+    </form>
+
+    <div class="stats">
+        <div class="stat-card">
+            <h3>12+</h3>
+            <p>Active Events</p>
+        </div>
+        <div class="stat-card">
+            <h3>100%</h3>
+            <p>Free to Attend</p>
+        </div>
+        <div class="stat-card">
+            <h3>5+</h3>
+            <p>Cities</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED EVENTS -->
+<section class="section">
+    <h2>Featured Events</h2>
+    <p class="section-sub">Don't miss these highlighted community gatherings</p>
+
+    <div class="cards">
+        <div class="event-card">
+            <span class="category">Arts & Culture</span>
+            <span class="featured">★ Featured</span>
+            <img src="images/OpenMic.jpg" alt="">
+            <div class="content">
+                <h3>Addis Poetry Night</h3>
+                <p class="meta">📅 Nov 25, 2025 • 🕒 19:00</p>
+                <p class="meta">📍 Alliance Ethio-Française</p>
+                <span class="city">Addis Ababa</span>
             </div>
         </div>
-    </section>
 
-    <hr>
-
-    <section>
-        <header>
-            <h2>Featured Events</h2>
-            <p>Don't miss these highlighted community gatherings</p>
-        </header>
-
-        
-        <div>
-
-            <div>
-                <figure>
-                    <img src="images/OpenMic.jpg" alt="Open mic" width="350" height="200">
-                    <figcaption>Arts &amp; Culture</figcaption>
-                    <h3>Addis Poetry Night</h3>
-                    <p>Nov 25, 2025 • 19:00<br>Alliance Ethio-Française<br>Addis Ababa</p>
-                </figure>
+        <div class="event-card">
+            <span class="category">Music</span>
+            <span class="featured">★ Featured</span>
+            <img src="images/coffee setup.jpg" alt="">
+            <div class="content">
+                <h3>Coffee Ceremony & Music</h3>
+                <p class="meta">📅 Nov 28, 2025 • 🕒 16:00</p>
+                <p class="meta">📍 Tomoca Coffee</p>
+                <span class="city">Addis Ababa</span>
             </div>
-
-            <div>
-                <figure>
-                    <img src="images/coffee setup.jpg" alt="Traditional coffee ceremony setup" width="350" height="200">
-                    <figcaption>Music</figcaption>
-                    <h3>Coffee Ceremony &amp; Music</h3>
-                    <p>Nov 28, 2025 • 16:00<br>Tomoca Coffee<br>Addis Ababa</p>
-                </figure>
-            </div>
-
-            <div>
-                <figure>
-                    <img src="images/Etege.jpg" alt="" width="350" height="200">
-                    <figcaption>Arts &amp; Culture</figcaption>
-                    <h3>Traditional Dance Workshop</h3>
-                    <p>Dec 5, 2025 • 17:30<br>National Theatre<br>Addis Ababa</p>
-                </figure>
-            </div>
-
         </div>
-    </section>
 
-    <hr>
-
-    <section>
-        <header>
-            <h2>Upcoming Events</h2>
-            <p>Browse all events happening soon</p>
-            <p><a href="#">View All</a></p>
-        </header>
-
-        
-        <div>
-
-            <div>
-                <figure>
-                    <img src="images/OpenMic.jpg" alt="Open mic" width="350" height="200">
-                    <figcaption>Arts &amp; Culture</figcaption>
-                    <h3>Addis Poetry Night</h3>
-                    <p>Nov 25, 2025 • 19:00<br>Dusk Addis<br>Addis Ababa</p>
-                </figure>
+        <div class="event-card">
+            <span class="category">Arts & Culture</span>
+            <span class="featured">★ Featured</span>
+            <img src="images/Etege.jpg" alt="">
+            <div class="content">
+                <h3>Traditional Dance Workshop</h3>
+                <p class="meta">📅 Dec 5, 2025 • 🕒 17:30</p>
+                <p class="meta">📍 National Theatre</p>
+                <span class="city">Addis Ababa</span>
             </div>
-
-            <div>
-                <figure>
-                    <img src="images/coffee setup.jpg" alt="Traditional coffee ceremony" width="350" height="200">
-                    <figcaption>Music</figcaption>
-                    <h3>Coffee Ceremony &amp; Music</h3>
-                    <p>Nov 28, 2025 • 16:00<br>Tomoca Coffee<br>Addis Ababa</p>
-                </figure>
-            </div>
-
-            <div>
-                <figure>
-                    <img src="images/Tech.jpg" alt="Tech contest" width="350" height="200">
-                    <figcaption>Technology</figcaption>
-                    <h3>Tech Meetup: AI in Ethiopia</h3>
-                    <p>Dec 1, 2025 • 14:00<br>IceAddis<br>Addis Ababa</p>
-                </figure>
-            </div>
-
-            <div>
-                <figure>
-                    <img src="images/sport.jpg" alt="People in community mass sport" width="350" height="200">
-                    <figcaption>Community</figcaption>
-                    <h3>Community Meetup</h3>
-                    <p>(details to be added)</p>
-                </figure>
-            </div>
-
-            <div>
-                <figure>
-                    <img src="images/The fire.jpg" alt="" width="350" height="200">
-                    <figcaption>Arts &amp; Culture</figcaption>
-                    <h3>Cultural Event</h3>
-                    <p>(details to be added)</p>
-                </figure>
-            </div>
-
-            <div>
-                <figure>
-                    <img src="images/business.jpg" alt="Business meeting" width="350" height="200">
-                    <figcaption>Business</figcaption>
-                    <h3>Business Networking</h3>
-                    <p>(details to be added)</p>
-                </figure>
-            </div>
-
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- UPCOMING EVENTS -->
+<section class="section">
+    <header class="upcoming-header">
+        <div>
+            <h2>📍 Upcoming Events</h2>
+            <p class="section-sub">Browse all events happening soon</p>
+        </div>
+        <a href="#" class="view-all-btn">View All</a>
+    </header>
+
+    <div class="cards">
+        <div class="event-card">
+            <span class="category">Arts & Culture</span>
+            <img src="images/OpenMic.jpg" alt="">
+            <div class="content">
+                <h3>Addis Poetry Night</h3>
+                <p class="meta">📅 Nov 25, 2025 • 🕒 19:00</p>
+                <p class="meta">📍 Alliance Ethio-Française</p>
+                <span class="city">Addis Ababa</span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <span class="category">Music</span>
+            <img src="images/coffee setup.jpg" alt="">
+            <div class="content">
+                <h3>Coffee Ceremony & Music</h3>
+                <p class="meta">📅 Nov 28, 2025 • 🕒 16:00</p>
+                <p class="meta">📍 Tomoca Coffee</p>
+                <span class="city">Addis Ababa</span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <span class="category">Technology</span>
+            <img src="images/Tech.jpg" alt="">
+            <div class="content">
+                <h3>Tech Meetup: AI in Ethiopia</h3>
+                <p class="meta">📅 Dec 1, 2025 • 🕒 14:00</p>
+                <p class="meta">📍 IceAddis</p>
+                <span class="city">Addis Ababa</span>
+            </div>
+        </div>
+        <!-- ------------ -->
+
+                <!-- SECOND ROW -->
+        <div class="event-card">
+            <span class="category">Community</span>
+            <img src="images/sport.jpg" alt="">
+            <div class="content">
+                <h3>Community Clean-Up Day</h3>
+                <p class="meta">📅 Dec 2, 2025 • 🕒 08:00</p>
+                <p class="meta">📍 Meskel Square</p>
+                <span class="city">Addis Ababa</span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <span class="category">Arts & Culture</span>
+            <img src="images/Etege.jpg" alt="">
+            <div class="content">
+                <h3>Traditional Dance Workshop</h3>
+                <p class="meta">📅 Dec 5, 2025 • 🕒 17:30</p>
+                <p class="meta">📍 National Theatre</p>
+                <span class="city">Addis Ababa</span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <span class="category">Business</span>
+            <img src="images/business.jpg" alt="">
+            <div class="content">
+                <h3>Startup Networking Event</h3>
+                <p class="meta">📅 Dec 7, 2025 • 🕒 18:00</p>
+                <p class="meta">📍 Bluemoon Hotel</p>
+                <span class="city">Addis Ababa</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 </main>
 
-<hr>
-
-<footer>
-    <p>© 2025 Event ተራ. All rights reserved.</p>
+<footer class="footer">
+    © 2025 Event ተራ. All rights reserved.
 </footer>
 
 </body>
