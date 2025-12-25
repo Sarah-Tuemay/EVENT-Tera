@@ -1,73 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>EVENT ተራ - Contact Us</title>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVENT ተራ - Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
 
+<body>
 
-    </head>
-    <body>
-
-        <nav>
-            <div style="font-weight: bold; color: #034569;">EVENT ተራ</div>
-            <div>
-                <a href="index.html">Home</a>
-                <a href="browse-events.html">Browse Events</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-
-        <header>
-            <h1>Contact Us</h1>
-            <p>We’re here to support Ethiopia’s event community</p>
-        </header>
-
-       
-        <section class="contact-cards">
-            <div class="card">
-                <h3>📍 Location</h3>
-                <p>Addis Ababa, Ethiopia</p>
-            </div>
-            <div class="card">
-                <h3>📧 Email</h3>
-                <p>support@eventtera.et</p>
-            </div>
-            <div class="card">
-                <h3>📞 Phone</h3>
-                <p>+251 900 00 0000</p>
-            </div>
-            <div class="card">
-                <h3>🌐 Socials</h3>
-                <p>@event_tera</p>
-            </div>
-        </section>
-
-        <div class="container">
-            <h2>Send us a message</h2>
-
-            <form>
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name" required />
-                <br>
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="Enter your email" required />
-                <br>
-                <label for="message">Message</label>
-                <textarea id="message" rows="5" placeholder="Write your message here" required></textarea>
-                <br>
-                <button type="submit">Send Message</button>
-            </form>
+    <!-- Navigation -->
+    <nav>
+        <div style="font-weight: bold; color: #034569;">EVENT ተራ</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="browse-events.html">Browse Events</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
+    </nav>
 
-        <footer>
-            <p>© 2025 EVENT ተራ. All rights reserved.</p>
+    <!-- Page Header -->
+    <header>
+        <h1>Contact Us</h1>
+        <p>We’re here to support Ethiopia’s event community</p>
+    </header>
+
+    <!-- Contact Information -->
+    <section class="contact-cards">
+        <h2>Contact Information</h2>
+
+        <article class="card">
+            <h3>📍 Location</h3>
+            <p>Addis Ababa, Ethiopia</p>
+        </article>
+
+        <article class="card">
+            <h3>📧 Email</h3>
             <p>
-                <a href="browse-events.html">Browse Events</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
+                <a href="mailto:support@eventtera.et">support@eventtera.et</a>
             </p>
-        </footer>
-    </body>
+        </article>
+
+        <article class="card">
+            <h3>📞 Phone</h3>
+            <p>
+                <a href="tel:+251900000000">+251 900 00 0000</a>
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>🌐 Social Media</h3>
+            <p>@event_tera</p>
+        </article>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="container">
+        <h2>Get in Touch</h2>
+
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+            <label for="reason">Reason for Contact</label>
+            <select id="reason" name="reason">
+                <option>General Inquiry</option>
+                <option>Event Promotion</option>
+                <option>Technical Support</option>
+                <option>Partnership</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"
+                placeholder="Write your message here" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Office Hours -->
+        <section>
+            <h3>Office Hours</h3>
+            <p>Monday – Friday: 9:00 AM – 5:00 PM</p>
+            <p>Saturday: 10:00 AM – 2:00 PM</p>
+            <p>Sunday: Closed</p>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 EVENT ተራ. All rights reserved.</p>
+        <p>
+            <a href="browse-events.html">Browse Events</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+    </footer>
+
+</body>
 </html>
