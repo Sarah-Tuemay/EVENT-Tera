@@ -1,4 +1,4 @@
-/* Reset and base styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ header {
 .logo-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, #00d4ff, rgb(0, 185, 219));
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -43,10 +43,6 @@ header {
 .logo-text h1 {
     font-size: 22px;
     font-weight: 600;
-}
-.logo-text h1:hover {
-    color: rgb(0, 185, 219);
-    cursor: pointer;
 }
 
 .logo-text small {
@@ -68,7 +64,7 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(0, 185, 219);
+    color: #ffffff;
 }
 
 main {
@@ -178,14 +174,14 @@ main {
     gap: 30px;
 }
 
-/* Desktop (PC): 3 cards per row */
+/* Desktop: 3 cards */
 @media (min-width: 1024px) {
     .events-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Tablet: 2 cards per row + filter adjustments */
+/* Tablet: 2 cards */
 @media (min-width: 768px) and (max-width: 1023px) {
     .events-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -196,7 +192,7 @@ main {
     }
 }
 
-/* Phone: 1 card per row + full filter responsiveness */
+/* Phone: 1 card */
 @media (max-width: 767px) {
     .events-grid {
         grid-template-columns: 1fr;
@@ -245,22 +241,21 @@ main {
 
 .event-card:hover {
     transform: translateY(-8px);
-    border-color:rgb(0, 185, 219);
+    border-color: #00aaff;
     box-shadow: 0 12px 30px rgba(0, 170, 255, 0.2);
 }
 
 .event-image {
     height: 240px;
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
     position: relative;
 }
 
-.event-image::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.8));
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .category-tag {
@@ -279,7 +274,7 @@ main {
     position: absolute;
     top: 16px;
     right: 16px;
-    background-color: rgb(0, 185, 219);
+    background-color: #00aaff;
     color: #ffffff;
     padding: 8px 16px;
     border-radius: 30px;
@@ -310,7 +305,7 @@ main {
 }
 
 .event-details span {
-    color: rgb(0, 185, 219);
+    color: #00aaff;
     font-size: 16px;
 }
 
@@ -341,5 +336,5 @@ main {
 }
 
 .location-btn:hover {
-    background-color: rgb(0, 185, 219);
+    background-color: #005fa3;
 }
