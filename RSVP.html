@@ -4,44 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EVENT ተራ - RSVP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="script.js">
 </head>
 <body>
-    <h1>RSVP for Event</h1><br>
-    <p>Fill out the form below to confirm your attendance</p>
-    <form>
-          <img src="##" width="300"><br><br>
 
-                <h2>Event Name</h2>
-                <p><b>Date:</b> day, month,year</p>
-                <p><b>Time:</b> specific time</p>
-                <p><b>Venue:</b>Location</p>
-                <p><b>Admission:</b> FREE</p>
-    </form> <br><br>
-<form>
+    <!-- ===== Navbar ===== -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">✦</span>
+            <div>
+                <h3>EVENT ተራ</h3>
+                <p>Local Event Finder</p>
+            </div>
+        </div>
 
-<lable for="name">Full Name*</lable><br>
-<input type="text" id="name" name="email" placeholder="Enter your full name" required><br><br>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Browse Events</a>
+            <a href="#">About</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
 
-<lable for="email">Emial Address*</lable><br>
-<input type="email" id="email" name="email" placeholder="your.email@example.com" required><br><br>
+    <!-- ===== Page Header ===== -->
+    <section class="page-header">
+        
+        <a href="#" class="back-link">← Back to Event</a>
+        <h1>RSVP for Event</h1>
+        <p>Fill out the form below to confirm your attendance</p>
+    </section>
 
-<lable for="phone">Phone Number*</lable><br>
-<input type="tel" patter="[0-9]{10}" title="only numbers!" name="phone" placeholder="+251 911 123 456"><br><br>
+    <!-- ===== Main Content ===== -->
+    <main class="rsvp-container">
 
-<lable for="attendees">Number of Attendees*</lable><br>
-<input type="number" name="attendees" step="1" value="1" min="0" required><br><br>
+        <!-- ===== Event Details Card ===== -->
+        <section class="event-card">
+            <img src="event.jpg" alt="Event image" class="event-image">
 
-<lable>Additional Message(Optional)</lable><br>
-<textarea name="message" rows="5" cols="50" placeholder="Any questions or special requirements? "></textarea><br><br>
+            <h2 class="event-title">Addis Poetry Night</h2>
 
-<p> 
-    By submitting this form, you agree to share your contact information with the event organizer:
-    <a href="###">Event name</a><br><br>
+            <div class="event-info">
+                <div class="info-item">
+                    <span class="label">Date</span>
+                    <span>Tuesday, November 25, 2025</span>
+                </div>
 
-</p>
-<button type="submit">Confirm RSVP</button>
+                <div class="info-item">
+                    <span class="label">Time</span>
+                    <span>7:00 PM</span>
+                </div>
 
+                <div class="info-item">
+                    <span class="label">Venue</span>
+                    <span>Alliance Ethio-Française</span>
+                </div>
+            </div>
 
-</form>
+            <div class="admission-box">
+                <span class="label">Admission</span>
+                <span class="free">FREE</span>
+            </div>
+        </section>
+
+        <!-- ===== RSVP Form ===== -->
+        <section class="form-card">
+            <form id="rsvpForm">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" placeholder="your.email@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" placeholder="+251 911 123 456">
+                </div>
+
+                <div class="form-group">
+                    <label for="attendees">Number of Attendees *</label>
+                    <input type="number" id="attendees" value="1" min="1" required>
+                    <small class="helper-text">How many people will be attending?</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message (Optional)</label>
+                    <textarea id="message" rows="4"
+                        placeholder="Any questions or special requirements?"></textarea>
+                </div>
+
+                <div class="agreement-box">
+                    <p>
+                        By submitting this form, you agree to share your contact
+                        information with the event organizer:
+                        <a href="#">Addis Arts Collective</a>
+                    </p>
+                </div>
+
+                <button type="submit" id="rsvpBtn">Confirm RSVP</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
