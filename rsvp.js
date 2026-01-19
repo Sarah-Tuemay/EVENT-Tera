@@ -1,6 +1,6 @@
 let currentEvent = null;
 
-// When page loads
+// When pages loads 
 window.onload = function() {
     console.log("RSVP page loaded!");
     
