@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Events - EVENT ተራ</title>
+    <meta name="description" content="Browse all upcoming free events in Ethiopia. Filter by category, location, and date.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="icon" href="images/Temp-favicon.jpg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+<header class="header">
+    <a href="index.html" class="logo">
+        EVENT ተራ
+        <span>Local Event Finder</span>
+    </a>
+    <button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="events.html">Browse Events</a>
+        <a href="about_us.html">About</a>
+        <a href="contact_us.html">Contact Us</a>
+    </nav>
+</header>
+
+    <main id="main-content">
+        <div id="error-container" class="error-container"></div>
+        
+        <div class="container">
+            <h1 class="page-title">Browse Events</h1>
+            <p class="page-subtitle">Explore upcoming free community events across Ethiopia</p>
+            
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search events...">
+                    <button id="filters-btn" class="filters-btn">Filters</button>
+                </div>
+                
+                <div id="filter-panel" class="filter-panel">
+                    <div class="filter-group">
+                        <label for="category-filter">Event Type</label>
+                        <select id="category-filter">
+                            <option value="">All Types</option>
+                            <option value="Arts & Culture">Arts & Culture</option>
+                            <option value="Music">Music</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Community">Community</option>
+                            <option value="Business">Business</option>
+                            <option value="Education">Education</option>
+                            <option value="Sports & Wellness">Sports & Wellness</option>
+                            <option value="Food & Drink">Food & Drink</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="location-filter">Location</label>
+                        <select id="location-filter">
+                            <option value="">All Locations</option>
+                            <option value="Addis Ababa">Addis Ababa</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="from-date">From Date</label>
+                        <input type="date" id="from-date">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="to-date">To Date</label>
+                        <input type="date" id="to-date">
+                    </div>
+                    
+                    <button type="button" class="clear-filters-btn" onclick="clearAllFilters()">Clear Filters</button>
+                </div>
+            </div>
+            
+            <div class="results-header">
+                <span id="results-count">Found 0 events</span>
+                <div class="sort-container">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select" class="sort-select">
+                        <option value="date-asc">Date (Earliest)</option>
+                        <option value="date-desc">Date (Latest)</option>
+                        <option value="title-asc">Title (A-Z)</option>
+                        <option value="title-desc">Title (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="events-grid-container" class="events-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            
+            <div class="pagination-container" id="pagination-container" style="display: none;">
+                <div class="pagination-info">
+                    <span id="pagination-info">Showing 1-6 of 12 events</span>
+                </div>
+                <div class="pagination-controls">
+                    <button id="prev-page" class="pagination-btn" disabled>← Previous</button>
+                    <div class="page-numbers" id="page-numbers"></div>
+                    <button id="next-page" class="pagination-btn">Next →</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> EVENT ተራ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>

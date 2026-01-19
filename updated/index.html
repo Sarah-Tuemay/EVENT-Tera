@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT ተራ - Local Event Finder</title>
+    <meta name="description" content="Discover free local events in Ethiopia. Find cultural gatherings, workshops, and community activities in your area.">
+    <meta name="keywords" content="Ethiopia events, Addis Ababa events, free events, community events">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="images/Temp-favicon.jpg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+<header class="header">
+    <a href="index.html" class="logo">
+        EVENT ተራ
+        <span>Local Event Finder</span>
+    </a>
+    <button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="events.html">Browse Events</a>
+        <a href="about_us.html">About</a>
+        <a href="contact_us.html">Contact Us</a>
+    </nav>
+</header>
+
+    <main id="main-content">
+        <div id="error-container" class="error-container"></div>
+        
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Local Events in Ethiopia</h1>
+                <p>Find free community events, cultural gatherings, and workshops near you</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Search events..." id="home-search">
+                    <button type="button" onclick="window.location.href='events.html'">Browse All Events</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container">
+                <h2>Featured Events</h2>
+                <div id="featured-events-container" class="events-grid">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2>Explore Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card" onclick="window.location.href='events.html?category=Arts%20%26%20Culture'">
+                        <div class="category-icon">🎨</div>
+                        <h3>Arts & Culture</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='events.html?category=Music'">
+                        <div class="category-icon">🎵</div>
+                        <h3>Music</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='events.html?category=Technology'">
+                        <div class="category-icon">💻</div>
+                        <h3>Technology</h3>
+                    </div>
+                    <div class="category-card" onclick="window.location.href='events.html?category=Community'">
+                        <div class="category-icon">🤝</div>
+                        <h3>Community</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Monthly Events</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Cities Covered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free Events</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How EVENT ተራ Works</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Browse Events</h3>
+                        <p>Explore free events happening in your city</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Find What You Like</h3>
+                        <p>Filter by category, date, and location</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>RSVP & Attend</h3>
+                        <p>Confirm your attendance and join the community</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> EVENT ተራ. All rights reserved.</p>
+            <p>
+                <a href="about_us.html">About</a> | 
+                <a href="contact_us.html">Contact</a> | 
+                <a href="events.html">Events</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

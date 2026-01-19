@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - EVENT ተራ</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/landingpage.css">
+    <link rel="icon" href="images/Temp-favicon.jpg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <a href="index.html" class="logo">
+            EVENT ተራ
+            <span>Local Event Finder</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav id="main-nav">
+            <a href="index.html">Home</a>
+            <a href="events.html">Browse Events</a>
+            <a href="about_us.html">About</a>
+            <a href="contact_us.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div id="error-container" class="error-container"></div>
+        
+        <div id="event-detail-container" class="container">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading event details...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> EVENT ተራ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/landingpage.js"></script>
+
+</body>
+</html>

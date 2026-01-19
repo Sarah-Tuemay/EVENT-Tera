@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - EVENT ተራ</title>
+    <meta name="description" content="RSVP for events on EVENT ተራ. Confirm your attendance to upcoming events.">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/rsvp.css">
+    <link rel="icon" href="images/Temp-favicon.jpg">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+<header class="header">
+    <a href="index.html" class="logo">
+        EVENT ተራ
+        <span>Local Event Finder</span>
+    </a>
+    <button class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav id="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="events.html">Browse Events</a>
+        <a href="about_us.html">About</a>
+        <a href="contact_us.html">Contact Us</a>
+    </nav>
+</header>
+
+    <main id="main-content">
+        <div id="error-container" class="error-container"></div>
+        
+        <div class="container">
+            <div class="back-link">
+                <a href="javascript:history.back()" class="back-btn">← Back to Event</a>
+            </div>
+
+            <section class="page-title">
+                <h1>RSVP for Event</h1>
+                <p>Fill out the form below to confirm your attendance</p>
+            </section>
+
+            <section class="rsvp-container">
+                <div class="event-details-card">
+                    <div id="event-preview">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rsvp-form-card">
+                    <h2>Confirm Your Attendance</h2>
+                    <form id="rsvp-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+251 911 123 456" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="attendees">Number of Attendees *</label>
+                            <input type="number" id="attendees" name="attendees" min="1" max="10" value="1" required>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Any questions or special requirements?"></textarea>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <button type="submit" id="rsvp-submit-btn" class="submit-btn">Confirm RSVP</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> EVENT ተራ. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/rsvp.js"></script>
+</body>
+</html>
