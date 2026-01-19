@@ -1,7 +1,3 @@
-// ============================================
-// RSVP.JS - Code for RSVP page
-// ============================================
-
 let currentEvent = null;
 
 // When page loads
@@ -14,10 +10,6 @@ window.onload = function() {
     // Setup form
     setupForm();
 };
-
-// ============================================
-// LOAD EVENT DETAILS
-// ============================================
 
 function loadEventDetails() {
     // Get event ID from URL
@@ -74,9 +66,6 @@ function tryLoadEventDetails(eventId) {
     showEventDetails();
 }
 
-// ============================================
-// SHOW EVENT DETAILS
-// ============================================
 
 function showEventDetails() {
     const container = document.getElementById('event-preview');
@@ -108,10 +97,6 @@ function showEventDetails() {
     `;
 }
 
-// ============================================
-// SETUP FORM
-// ============================================
-
 function setupForm() {
     const form = document.getElementById('rsvp-form');
     
@@ -128,9 +113,6 @@ function setupForm() {
     }
 }
 
-// ============================================
-// VALIDATE FORM
-// ============================================
 
 function validateForm() {
     const form = document.getElementById('rsvp-form');
@@ -177,9 +159,6 @@ function validateForm() {
     return isValid;
 }
 
-// ============================================
-// SUBMIT FORM
-// ============================================
 
 function submitForm() {
     const form = document.getElementById('rsvp-form');
