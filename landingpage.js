@@ -1,34 +1,16 @@
-// ============================================
-// LANDINGPAGE.JS - Safe working version
-// ============================================
-
 console.log("Landing page script loaded");
-
-// Global variables - allEvents is declared in common.js
 let currentEvent = null;
-
-// When page loads
 window.onload = function () {
   console.log("Page fully loaded");
-
-  // Try to load event details immediately
   tryLoadEventDetails();
-
-  // Also try again after events are loaded
   document.addEventListener("eventsLoaded", function () {
     console.log("Events loaded event received");
     tryLoadEventDetails();
   });
-
-  // Final backup attempt
   setTimeout(function () {
     tryLoadEventDetails();
   }, 2000);
 };
-
-// ============================================
-// TRY TO LOAD EVENT DETAILS (safely)
-// ============================================
 
 function tryLoadEventDetails() {
   if (typeof allEvents === "undefined") {
@@ -40,10 +22,6 @@ function tryLoadEventDetails() {
     loadEventDetails();
   }
 }
-
-// ============================================
-// LOAD EVENT DETAILS
-// ============================================
 
 function loadEventDetails() {
   console.log("=== Loading Event Details ===");
@@ -93,10 +71,6 @@ function loadEventDetails() {
   showSimilarEvents();
 }
 
-// ============================================
-// SHOW LOADING STATE
-// ============================================
-
 function showLoadingState() {
   const container = document.getElementById("event-detail-container");
   if (container) {
@@ -108,10 +82,6 @@ function showLoadingState() {
         `;
   }
 }
-
-// ============================================
-// SHOW EVENT DETAILS
-// ============================================
 
 function showEventDetails() {
   if (!currentEvent) return;
@@ -175,10 +145,6 @@ function showEventDetails() {
     `;
 }
 
-// ============================================
-// SHOW SIMILAR EVENTS
-// ============================================
-
 function showSimilarEvents() {
   if (!currentEvent || !Array.isArray(allEvents)) return;
 
@@ -208,10 +174,6 @@ function showSimilarEvents() {
   });
 }
 
-// ============================================
-// CREATE SIMILAR EVENT CARD
-// ============================================
-
 function createSimilarEventCard(event) {
   const card = document.createElement("div");
   card.className = "similar-event-card";
@@ -236,9 +198,6 @@ function createSimilarEventCard(event) {
   return card;
 }
 
-// ============================================
-// SHARE FUNCTIONS
-// ============================================
 
 function shareEvent() {
   if (!currentEvent) return;
@@ -284,10 +243,6 @@ function copyLink() {
     });
 }
 
-// ============================================
-// ERROR HANDLING
-// ============================================
-
 function showError(message) {
   console.error("ERROR:", message);
   const container = document.getElementById("event-detail-container");
@@ -305,9 +260,6 @@ function showError(message) {
   }
 }
 
-// ============================================
-// HELPER: FORMAT DATE
-// ============================================
 
 function formatDate(dateStr) {
   const date = new Date(dateStr);
@@ -319,3 +271,4 @@ function formatDate(dateStr) {
     day: "numeric",
   });
 }
+
